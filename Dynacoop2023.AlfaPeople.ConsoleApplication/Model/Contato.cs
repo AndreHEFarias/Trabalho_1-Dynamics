@@ -31,6 +31,7 @@ namespace Dynacoop2023.AlfaPeople.ConsoleApplication.Model
             contato["dcp_cpf"] = contactCPF;
             contato["telephone1"] = contactTel;
             contato["accountid"] = new EntityReference("account", accountId);
+            contato["parentcustomerid"] = new EntityReference("account", accountId);
 
             Guid contactId = this.ServiceClient.Create(contato);
             return contactId;

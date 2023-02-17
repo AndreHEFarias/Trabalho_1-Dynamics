@@ -53,7 +53,7 @@ namespace Dynacoop2023.AlfaPeople.ConsoleApplication
             Entity accounts = contaController.GetAccountByCNPJ(accountCNPJ);
             if (accounts != null)
             {
-                Console.WriteLine("Conta ja existe");
+                Console.WriteLine("Conta ja existe\n");
                 Restart();
                 Guid guid = Guid.NewGuid();
                 return guid;
@@ -63,7 +63,7 @@ namespace Dynacoop2023.AlfaPeople.ConsoleApplication
             {
                 Guid accountId = contaController.CreateAccount(name, decimal.Parse(accountValue), int.Parse(numberBranches), Guid.Parse(primarycontactid), int.Parse(accountType), accountCNPJ);
                 Console.WriteLine($"https://org5229b951.crm2.dynamics.com/main.aspx?appid=74c97688-24ae-ed11-9885-002248365eb3&forceUCI=1&pagetype=entityrecord&etn=account&id={accountId}");
-                Console.WriteLine("");
+                Console.WriteLine("\n");
                 return accountId;
             }
 
@@ -87,14 +87,14 @@ namespace Dynacoop2023.AlfaPeople.ConsoleApplication
                 Entity contacts = contatoController.GetContactByCPF(contactCPF);
                 if (contacts != null)
                 {
-                    Console.WriteLine("Contato ja existe");
+                    Console.WriteLine("Contato ja existe\n");
                     Restart();
                 }
                 else
                 {
                     Guid contactId = contatoController.CreateContact(contactName, contactTel, contactCPF, accountId);
                     Console.WriteLine($"https://org5229b951.crm2.dynamics.com/main.aspx?appid=74c97688-24ae-ed11-9885-002248365eb3&forceUCI=1&pagetype=entityrecord&etn=contact&id={contactId}");
-                    Console.WriteLine("");
+                    Console.WriteLine("\n");
                 }
             }
             else
