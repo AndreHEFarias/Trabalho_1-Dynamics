@@ -1,6 +1,4 @@
 ﻿using Dynacoop2023.AlfaPeople.ConsoleApplication.Model;
-using Microsoft.Crm.Sdk.Messages;
-using Microsoft.Rest;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Tooling.Connector;
 using System;
