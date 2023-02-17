@@ -57,7 +57,7 @@ namespace Dynacoop2023.AlfaPeople.ConsoleApplication
             {
                 Guid accountId = contaController.CreateAccount(name, decimal.Parse(accountValue), int.Parse(numberBranches), Guid.Parse(primarycontactid), int.Parse(accountType), accountCNPJ);
                 Console.WriteLine($"https://org5229b951.crm2.dynamics.com/main.aspx?appid=74c97688-24ae-ed11-9885-002248365eb3&forceUCI=1&pagetype=entityrecord&etn=account&id={accountId}");
-                Console.WriteLine("\n");
+                Console.WriteLine("");
                 return accountId;
             }
 
@@ -88,7 +88,7 @@ namespace Dynacoop2023.AlfaPeople.ConsoleApplication
                 {
                     Guid contactId = contatoController.CreateContact(contactName, contactTel, contactCPF, accountId);
                     Console.WriteLine($"https://org5229b951.crm2.dynamics.com/main.aspx?appid=74c97688-24ae-ed11-9885-002248365eb3&forceUCI=1&pagetype=entityrecord&etn=contact&id={contactId}");
-                    Console.WriteLine("\n");
+                    Console.WriteLine("");
                 }
             }
             else
